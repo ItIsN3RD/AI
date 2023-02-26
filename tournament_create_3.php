@@ -85,6 +85,7 @@ include 'includes/header.php';
                             function add_date() {
                                 var date = document.getElementById("selected_date").value;
                                 var details = document.getElementById("selected_details").value;
+
                                 // verify that the date is not empty
                                 if (date == "" || details == "") {
                                     return;
@@ -102,7 +103,7 @@ include 'includes/header.php';
                                     cell1.innerHTML = '<input class="form-control" type="text" name="date[]" value="' + date_formatted + '">';
 
                                     cell1.style.width = "9em";
-                                    cell2.innerHTML = '<textarea class="form-control" name="details[]">' + details + '</textarea>';
+                                    cell2.innerHTML = '<textarea class="form-control" name="detail[]">' + details + '</textarea>';
                                     cell3.innerHTML = '<button type="button" class="btn btn-danger" onclick="remove_date(this)">x</button>';
                                     cell3.style.width = "0px";
                                     document.getElementById("selected_date").value = "";
